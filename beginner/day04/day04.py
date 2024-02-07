@@ -43,6 +43,7 @@ print(states_of_america)
 states_of_america.extend(["Cuba", "Caribbean"])
 print(states_of_america)
 states_of_america.sort()
+states_of_america.count()
 print(states_of_america)
 
 # Exercise Banker Roulette - Who will pay the bill?

@@ -15,6 +15,7 @@ print("Hello" + " World")
 print("New lines can be created with a backslash and n.\n")
 
 # Exercise 3 - Input Function
+print("Hello " + input("What is your Name?"))
 name = input('What is your name? ')
 print(len(name))
 print(len(input('What is your name? ')))
