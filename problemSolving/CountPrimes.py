@@ -18,5 +18,19 @@ def count_prime(n: int):
                 count += 1
     return count
 
-print(count_prime(10))
-print(count_prime(54))
+def check_number_is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    result = True
+    for x in range(2, n):
+        if n%x == 0:
+            result = False
+            break
+    return result
+
+print(check_number_is_prime(10))
+print([x for x in range(20) if check_number_is_prime(x) == True])
+
+# print(count_prime(54))
