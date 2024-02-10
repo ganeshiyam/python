@@ -258,9 +258,3 @@ print(5 in my_set)  # Output: False
 
 print(len(my_set))  # Output: 4
 
-# OOP (Object Oriented Programming)
-# OOP is a programming paradigm that revolves around the concept of objects.
-# An object is a self contained unit that encapsulates data and behavior related to the data.
-# In Python everything is a object, including Int, Str and even functions.
-
-

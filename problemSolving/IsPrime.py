@@ -15,4 +15,4 @@ def is_prime(number: int):
                 return False
         return True
 
-print(is_prime(9))
+print(is_prime(11))
