@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas</title>
+</head>
+<body>
+<div class="text-viewer--container--18Ayx">
+   <div class="text-viewer--scroll-container--1iy0Z">
+      <div class="text-viewer--content--3hoqQ">
+         <div class="ud-heading-xxl text-viewer--main-heading--ZbxZA">Filtering in Pandas</div>
+         <div class="article-asset--container--3djM8">
+            <div data-purpose="safely-set-inner-html:rich-text-viewer:html" class="article-asset--content--1dAQ9 rt-scaffolding">
+               <h4>Filtering in Pandas</h4>
+               <h4></h4>
+               <p>Filtering is a fundamental operation in data analysis that allows you to extract specific subsets of data based on defined conditions. Pandas, a versatile data manipulation library in Python, provides powerful tools for filtering that enable you to focus on the data that matters most. In this comprehensive guide, we will explore the various techniques and methods for filtering in Pandas, empowering you to uncover meaningful insights within your datasets.</p>
+               <h4>Basic Filtering in Pandas:</h4>
+               <p>Basic filtering involves selecting rows or columns from a DataFrame based on a specified condition. Let's consider a simple example:</p>
+               <div class="ud-component--base-components--code-block">
+                  <div>
+                     <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="kwd">import</span><span class="pln"> pandas </span><span class="kwd">as</span><span class="pln"> pd</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="com"># Creating a DataFrame</span></li><li class="L4"><span class="pln">data </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="str">'Name'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'John'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Alice'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Bob'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Charlie'</span><span class="pun">],</span></li><li class="L5"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Age'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="lit">25</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">22</span><span class="pun">,</span><span class="pln"> </span><span class="lit">35</span><span class="pun">],</span></li><li class="L6"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Salary'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="lit">50000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">60000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">55000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">70000</span><span class="pun">]}</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">df </span><span class="pun">=</span><span class="pln"> pd</span><span class="pun">.</span><span class="typ">DataFrame</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="com"># Filtering based on age</span></li><li class="L1"><span class="pln">young_employees </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Age'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">30</span><span class="pun">]</span></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span></li><li class="L3"><span class="pln">&nbsp; </span></li></ol></pre>
+                  </div>
+               </div>
+               <p>In this example, we're filtering the DataFrame to select rows where the 'Age' column is less than 30. This basic filtering operation is the foundation for more complex data extraction.</p>
+               <h4>Advanced Filtering Techniques:</h4>
+               <p>Pandas offers a variety of techniques for advanced filtering:</p>
+               <ul>
+                  <li>
+                     <p><strong>Logical Operators:</strong> Combine multiple conditions using logical operators like AND (&amp;), OR (|), and NOT (~).</p>
+                  </li>
+                  <li>
+                     <p><strong>isin() Method:</strong> Filter based on a list of values using the `isin()` method.</p>
+                  </li>
+                  <li>
+                     <p><strong>String Methods:</strong> Apply string methods to filter text data efficiently.</p>
+                  </li>
+               </ul>
+               <h4>Example: Using Logical Operators</h4>
+               <div class="ud-component--base-components--code-block">
+                  <div>
+                     <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Filtering based on multiple conditions</span></li><li class="L2"><span class="pln">young_high_earners </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[(</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Age'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">30</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Salary'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">55000</span><span class="pun">)]</span></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span></li><li class="L4"><span class="pln">&nbsp; </span></li></ol></pre>
+                  </div>
+               </div>
+               <h4>Example: Using isin() Method</h4>
+               <div class="ud-component--base-components--code-block">
+                  <div>
+                     <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Filtering based on a list of names</span></li><li class="L2"><span class="pln">selected_names </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Name'</span><span class="pun">].</span><span class="pln">isin</span><span class="pun">([</span><span class="str">'Alice'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Charlie'</span><span class="pun">])]</span></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span></li><li class="L4"><span class="pln">&nbsp; </span></li></ol></pre>
+                  </div>
+               </div>
+               <h4>Example: Using String Methods</h4>
+               <div class="ud-component--base-components--code-block">
+                  <div>
+                     <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Filtering names starting with 'A'</span></li><li class="L2"><span class="pln">a_names </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Name'</span><span class="pun">].</span><span class="pln">str</span><span class="pun">.</span><span class="pln">startswith</span><span class="pun">(</span><span class="str">'A'</span><span class="pun">)]</span></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span></li><li class="L4"><span class="pln">&nbsp; </span></li></ol></pre>
+                  </div>
+               </div>
+               <h4>Filtering Null (NaN) Values:</h4>
+               <p>Handling missing data is a crucial aspect of data analysis. Pandas provides methods to filter and handle null values effectively:</p>
+               <ul>
+                  <li>
+                     <p><strong>isnull() and notnull() Methods:</strong> Identify and filter null or non-null values.</p>
+                  </li>
+                  <li>
+                     <p><strong>dropna() Method:</strong> Remove rows or columns containing null values.</p>
+                  </li>
+                  <li>
+                     <p><strong>fillna() Method:</strong> Replace null values with a specified value or strategy.</p>
+                  </li>
+               </ul>
+               <h4>Example: Filtering Null Values</h4>
+               <div class="ud-component--base-components--code-block">
+                  <div>
+                     <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Filtering rows with null values in the 'Salary' column</span></li><li class="L2"><span class="pln">non_null_salaries </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Salary'</span><span class="pun">].</span><span class="pln">notnull</span><span class="pun">()]</span></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span></li><li class="L4"><span class="pln">&nbsp; </span></li></ol></pre>
+                  </div>
+               </div>
+               <h4></h4>
+               <p>Filtering in Pandas is a crucial skill for anyone working with data analysis or data engineering. Whether you're extracting specific subsets of data based on conditions, handling missing values, or applying advanced filtering techniques, Pandas provides a comprehensive set of tools to make the process efficient and effective. By mastering the art of filtering, you can unlock valuable insights within your datasets, enabling informed decision-making and analysis.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer class="ct-dashboard-separator curriculum-item-footer--flex-align-center--3ja06 curriculum-item-footer--footer--Rin15">
+      <div class="curriculum-item-footer--flex-align-center--3ja06 curriculum-item-footer--right--2UpXX">
+         <div class="curriculum-item-footer--flex-align-center--3ja06">
+            <div class="popper-module--popper--2BpLn">
+               <button type="button" data-purpose="toggle-fullscreen" class="ud-btn ud-btn-large ud-btn-ghost ud-heading-md curriculum-item-controls--control-bar-btn--iztSt control-bar-dropdown--trigger--iFz7P" id="popper-trigger--310" tabindex="0">
+                  <svg aria-label="Fullscreen" role="img" focusable="false" class="ud-icon ud-icon-medium">
+                     <use xlink:href="#icon-expand-diagonal"></use>
+                  </svg>
+               </button>
+               <div id="popper-content--311" class="popper-module--popper-content--3cLBV" style="bottom: 100%; left: 50%; transform: translateX(-50%);">
+                  <div class="popper-module--animation-wrapper--2ogNt">
+                     <div class="ud-text-sm tooltip-module--tooltip--1ORe9">Fullscreen</div>
+                  </div>
+               </div>
+            </div>
+            <div class="popper-module--popper--2BpLn">
+               <button type="button" data-purpose="theatre-mode-toggle-button" class="ud-btn ud-btn-large ud-btn-ghost ud-heading-md control-bar-dropdown--trigger--iFz7P" id="popper-trigger--312" tabindex="0">
+                  <svg aria-label="Expanded view" role="img" focusable="false" class="ud-icon ud-icon-medium">
+                     <use xlink:href="#icon-expand-horizontal"></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </div>
+   </footer>
+</div>
+</body>
+</html>

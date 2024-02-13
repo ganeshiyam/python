@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><h3>DataFrame and Series in Pandas</h3></title>
+</head>
+<body>
+<div class="text-viewer--scroll-container--1iy0Z">
+   <div class="text-viewer--content--3hoqQ">
+      <div class="ud-heading-xxl text-viewer--main-heading--ZbxZA">DataFrame and Series in Pandas</div>
+      <div class="article-asset--container--3djM8">
+         <div data-purpose="safely-set-inner-html:rich-text-viewer:html" class="article-asset--content--1dAQ9 rt-scaffolding">
+            <h4>A Comprehensive Guide to DataFrame and Series in Python</h4>
+            <h4></h4>
+            <p>In the vast landscape of data engineering and analysis, Python has emerged as a powerhouse with its versatile libraries. One such library that stands out for its effectiveness in handling and manipulating data is Pandas. Pandas provides two fundamental data structures - DataFrame and Series - that serve as the building blocks for data manipulation and analysis. In this article, we will delve into the intricacies of Pandas DataFrame and Series to uncover their functionalities and how they contribute to efficient data engineering.</p>
+            <p><br></p>
+            <h4>Pandas DataFrame:</h4>
+            <p>The DataFrame is the epitome of tabular data representation in Pandas. Think of it as an Excel spreadsheet or a SQL table, where data is organized in rows and columns. Each column in a DataFrame is a Pandas Series, and together, they create a powerful and flexible structure for handling data.</p>
+            <h4>Creating a DataFrame:</h4>
+            <div class="ud-component--base-components--code-block">
+               <div>
+                  <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="kwd">import</span><span class="pln"> pandas </span><span class="kwd">as</span><span class="pln"> pd</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="com"># Creating a DataFrame from a dictionary</span></li><li class="L4"><span class="pln">data </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="str">'Name'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'John'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Alice'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Bob'</span><span class="pun">],</span></li><li class="L5"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'Age'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="lit">25</span><span class="pun">,</span><span class="pln"> </span><span class="lit">28</span><span class="pun">,</span><span class="pln"> </span><span class="lit">22</span><span class="pun">],</span></li><li class="L6"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">'City'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'New York'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'San Francisco'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Seattle'</span><span class="pun">]}</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">df </span><span class="pun">=</span><span class="pln"> pd</span><span class="pun">.</span><span class="typ">DataFrame</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span></li><li class="L9"><span class="pln">&nbsp; &nbsp; </span></li><li class="L0"><span class="pln">&nbsp; </span></li></ol></pre>
+               </div>
+            </div>
+            <h4>Accessing Data:</h4>
+            <div class="ud-component--base-components--code-block">
+               <div>
+                  <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Accessing a specific column</span></li><li class="L2"><span class="pln">names </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="str">'Name'</span><span class="pun">]</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="com"># Slicing rows</span></li><li class="L5"><span class="pln">subset </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="lit">1</span><span class="pun">:</span><span class="lit">3</span><span class="pun">]</span></li><li class="L6"><span class="pln">&nbsp; &nbsp; </span></li><li class="L7"><span class="pln">&nbsp; </span></li></ol></pre>
+               </div>
+            </div>
+            <h4>Manipulating Data:</h4>
+            <div class="ud-component--base-components--code-block">
+               <div>
+                  <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Adding a new column</span></li><li class="L2"><span class="pln">df</span><span class="pun">[</span><span class="str">'Salary'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">50000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">60000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">55000</span><span class="pun">]</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="com"># Filtering rows</span></li><li class="L5"><span class="pln">youngsters </span><span class="pun">=</span><span class="pln"> df</span><span class="pun">[</span><span class="pln">df</span><span class="pun">[</span><span class="str">'Age'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">25</span><span class="pun">]</span></li><li class="L6"><span class="pln">&nbsp; &nbsp; </span></li><li class="L7"><span class="pln">&nbsp; </span></li></ol></pre>
+               </div>
+            </div>
+            <h4>Pandas Series:</h4>
+            <p>A Series is essentially a one-dimensional array with labeled indices. It's the backbone of a DataFrame, and understanding it is crucial for effective data manipulation.</p>
+            <h4>Creating a Series:</h4>
+            <div class="ud-component--base-components--code-block">
+               <div>
+                  <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Creating a Series from a list</span></li><li class="L2"><span class="pln">ages </span><span class="pun">=</span><span class="pln"> pd</span><span class="pun">.</span><span class="typ">Series</span><span class="pun">([</span><span class="lit">25</span><span class="pun">,</span><span class="pln"> </span><span class="lit">28</span><span class="pun">,</span><span class="pln"> </span><span class="lit">22</span><span class="pun">],</span><span class="pln"> name</span><span class="pun">=</span><span class="str">'Age'</span><span class="pun">)</span></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span></li><li class="L4"><span class="pln">&nbsp; </span></li></ol></pre>
+               </div>
+            </div>
+            <h4>Accessing and Manipulating:</h4>
+            <div class="ud-component--base-components--code-block">
+               <div>
+                  <pre class="prettyprint linenums prettyprinted" role="presentation" style=""><ol class="linenums"><li class="L0"><span class="pln">&nbsp; &nbsp; </span></li><li class="L1"><span class="com"># Accessing elements by index</span></li><li class="L2"><span class="pln">first_age </span><span class="pun">=</span><span class="pln"> ages</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="com"># Applying a function to each element</span></li><li class="L5"><span class="pln">ages_in_months </span><span class="pun">=</span><span class="pln"> ages</span><span class="pun">.</span><span class="pln">apply</span><span class="pun">(</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="pln"> x </span><span class="pun">*</span><span class="pln"> </span><span class="lit">12</span><span class="pun">)</span></li><li class="L6"><span class="pln">&nbsp; &nbsp; </span></li><li class="L7"><span class="pln">&nbsp; </span></li></ol></pre>
+               </div>
+            </div>
+            <h4>Key Features of Pandas DataFrame and Series:</h4>
+            <ol>
+               <li>
+                  <p><strong>Data Alignment:</strong> One of the key advantages of Pandas is its automatic data alignment. Operations between Series and DataFrames align data based on labels, making it easy to work with incomplete or differently indexed data.</p>
+               </li>
+               <li>
+                  <p><strong>Missing Data Handling:</strong> Pandas provides robust tools for handling missing data, making it easier to clean and preprocess datasets.</p>
+               </li>
+               <li>
+                  <p><strong>GroupBy Operations:</strong> GroupBy operations in Pandas enable users to split data into groups based on some criteria and then apply a function to each group independently.</p>
+               </li>
+               <li>
+                  <p><strong>Merge and Concatenate:</strong> Pandas simplifies data integration by providing functions like merge and concat to combine DataFrames along either rows or columns.</p>
+               </li>
+            </ol>
+            <h4></h4>
+            <p>Pandas DataFrame and Series are indispensable tools for any data engineer or analyst working with Python. Their flexibility, efficiency, and comprehensive functionality make them go-to choices for data manipulation and analysis. Whether you are cleaning messy data, performing complex transformations, or conducting exploratory data analysis, Pandas empowers you to accomplish these tasks with ease.</p>
+         </div>
+      </div>
+   </div>
+</div>
+</body>
+</html>
+
